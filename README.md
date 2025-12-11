@@ -28,7 +28,7 @@ https://github.com/phil-lewis-exe/PythonCheatSheets
 
 ## TASKS
 
-# Workshop 8b
+# Workshop 11b
 
 This workshop has three sections.  **Core students should stop after exercise 2a.**
 
