@@ -162,7 +162,7 @@ depending on the input made
 ### part2a.py
 
 A student is writing code to run a times-table quiz
-that will ask questions like: What is 5x6?
+that will ask questions like: `5x6`
 (for which the answer should be 30)
 
 Write a function named: `make_times_table`
