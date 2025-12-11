@@ -1,45 +1,3 @@
-# Python Week 11 Assessed Workshop
-
----
-
-#### Note on workshop attendance...
-
-For advanced workshops completion of the activities must be under invigilated conditions.
-
-Please make sure you sign the workshop attendance sheet. 
-
-Code should autosave, but you must still commit your work at the end of the workshop before leaving.
-
----
-
-**Do all coding in CodeSpaces only** 
-
-You may use the following cheat sheets if you need to look up any Python commands.
-
-https://github.com/phil-lewis-exe/PythonCheatSheets
-
-**This week you should not use any other websites to help you code.**
-
-**You must ask if you need to use a website to translate the task questions**
-
-**Mobile phones may not be used in class**
-
----
-
-## TASKS
-
-# Workshop 11b
-
-This workshop has three sections.  **Core students should stop after exercise 2a.**
-
-The **average 2:1** student is expected to complete **most of parts 1 and 2** within the time allocated. 
-
-It is expected that the only the **few fastest high 1st class** students in the class will complete **all of the tasks** in the time allocated.
-
-The weighting for each section in the advanced workshops is approximately: part 1 (40%) part 2 (35%) part 3 (25%), but may be moderated to reflect difficulty of different workshops.
-
----
-
 ### part1a.py
 
 Look at the following example that defines
@@ -56,7 +14,10 @@ the right object types for `var2` and `var3`
 following the format from the example above.
 
 choose from:
+
+```
 int float bool str list dict tuple
+```
 
 ```python
 var2 = "42.5"
@@ -77,19 +38,17 @@ your code should make use of the variable `x`
 as defined below so it would work if a 
 different value is used 
 
-
+```
                1
  z =  x + -------
              x + 2 
-
+```
 
 test your code with: `print(z)`
 
 ```python
 x = 2
 ```
-
-add your code below
 
 ---
 
@@ -98,15 +57,14 @@ add your code below
 Create a dictionary with name: `mydict`
 that stores the following data
 
+```
 key        value
 "name"     "Einstein"
 "born"     1879
 "died"     1955
-
+```
 
 test your code using: `print(mydict)`
-
-add code below
 
 ---
 
@@ -119,14 +77,13 @@ that stores individual letters
 word = [ "H", "e", "l", "l", "o" ]
 ```
 
-write a line of code that adds the value: "!"
+write a line of code that adds the value: `"!"`
 to the end of `word`
 
 your code should work even if `word` stored a different number of entries.
 
 test your code has worked using: `print(word)`
 
-add code below
 
 ---
 
@@ -139,12 +96,12 @@ storing a string
 The function should return the final letter in the string
 
 e.g. 
-if we pass in the value 'apple' the
-value returned should be: 'e'
+if we pass in the value `'apple'` the
+value returned should be: `'e'`
 
 
 Add code to demonstrate the function
-using argument: hello
+using argument: `hello`
 storing the output in variable: `last_letter`
 
 test your code has worked using: `print(last_letter)`
@@ -165,14 +122,14 @@ in the list and print out the length
 of each string (one per line)
  with expected output:
 
+```
   3
   3
   5
   4
   4
   3
-
-add code below
+```
 
 ---
 
@@ -191,12 +148,12 @@ Add code below that will print a
 corresponding message 
 depending on the input made
 
+```
 "User selected yes"
 "User selected no"
 "User input invalid"
+```
 
-
-add code below
 
 ---
 
@@ -219,7 +176,9 @@ for `z` = 4 and `max_val` = 6
 
 the function should return
 
+```
 [ "0x4", "1x4", "2x4", "3x4", "4x4", "5x4", "6x4" ]
+```
 
 In addition the function should use default value of 9 for `max_val`
 
@@ -251,9 +210,8 @@ print(qlist) # after
 Then code that can loop over the list 
 and create a text file storing the questions
 (one question per line)
-in a file named "questions.txt"
+in a file named `"questions.txt"`
 
-write code below
 
 ---
 
@@ -265,13 +223,13 @@ The questions for the quiz are of form:
 q_str = "5x4"
 ```
 
-Each question contains a 3 character string like: "axb"
+Each question contains a 3 character string like: `"axb"`
 where `a` and `b` are single digit numbers
 
 Write a function called: `get_answer()`
 
 that takes single argument: `q_str`
-which is a 3 character string of form "axb"
+which is a 3 character string of form `"axb"`
 
 it should return the correct answer for the question (as a integer).
 
@@ -289,8 +247,8 @@ a None value i.e.
 
 This should occur when either:
 
-- provided string is not length 3
-- middle character of string is not 'x'
+- provided string is not length `3`
+- middle character of string is not `'x'`
 - first / last character are not valid numbers 
  
 in the final case your code should ensure that
@@ -300,7 +258,10 @@ without raising an exception
 
 Check your function works correctly by showing its output
 with each of the following input arguments: 
+
+```
 "5x4"  "99x99"  "3+3" "?x8"
+```
 
 ---
 
@@ -311,15 +272,19 @@ a custom set of times table questions
 
 You should display a message:
 
+```
 "Enter questions (type `q` when done)"
+```
 
 Then allow the student to type in their questions one by one.
 
 After each entry valid questions should be stored
 and the appropriate message from below displayed:
 
+```
     "question stored" or
     "question invalid"
+```
  
 (valid questions are 3 characters of form "axb" or "aXb"
  where `a` and `b` are digits in range 0 to 9)
@@ -333,28 +298,30 @@ all valid questions should be saved in a file named
 ### part3b.py
 
 Write code that can load in questions
-from the file: 'all_questions.txt'
+from the file: `'all_questions.txt'`
 
 It should load these into a list of questions named: `q_list`
 and then double the number of questions in the list
 by adding flipped entries
 
-e.g. for question "3x5"
-the flipped question is "5x3" 
+e.g. for question `"3x5"`
+the flipped question is `"5x3"`
 
 It should then shuffle this list, and use them to run a quiz
  
 This should start with the following message:
- 
+
+```
 "Welcome to the Quiz" 
- 
+```
+
 and display each question, then giving students a prompt using code
 
 ```python
 ans = input("> ")
 ```
 
-If a student gets a question wrong they should be given a message "try again"
+If a student gets a question wrong they should be given a message `"try again"`
 and must continue to enter their answer until they get the answer correct
 enter the correct answer.
 
@@ -372,22 +339,6 @@ time_taken = round(end_time - start_time)
 When the student completes the quiz they should recieve a message
 showing the time taken:
  
- You took ___ seconds!
- 
----
-
-### Submitting your work
-
-Run the following lines in the terminal to stage, commit and push your code back to your GitHub repository:
-
 ```
-git add .
-git commit -m "completed 11b"
-git push
-```
-
-To check your work has been saved you can run the line of code below in the terminal to get the web address of the repository in GitHub. Goto the repository and check the completed code files are stored.
-
-```
-git config --get remote.origin.url
+You took ___ seconds!
 ```
