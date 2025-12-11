@@ -59,8 +59,11 @@ that stores the following data
 
 
 **`key       value`**
+
 `"name"     "Einstein"`
+
 `"born"     1879`
+
 `"died"     1955`
 
 test your code using: `print(mydict)`
