@@ -116,7 +116,7 @@ The following code defines a list
 storing a set of strings
 
 ```python
-numbers = [ "one", "two", "three", "stop", "four", "five", "six" ]
+numbers = [ "one", "two", "three", "four", "five", "six" ]
 ```
 
 Write code to loop over the strings 
