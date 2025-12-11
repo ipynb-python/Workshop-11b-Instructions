@@ -30,7 +30,7 @@ https://github.com/phil-lewis-exe/PythonCheatSheets
 
 # Workshop 8b
 
-This workshop has three sections. 
+This workshop has three sections.  **Core students should stop after exercise 2a.**
 
 The **average 2:1** student is expected to complete **most of parts 1 and 2** within the time allocated. 
 
@@ -40,306 +40,340 @@ The weighting for each section in the advanced workshops is approximately: part 
 
 ---
 
-## Part 1
+### part1a.py
 
-This section includes 10 short tasks covering skills on the module so far. 
-
-If you get stuck on a particular task you are advised to move on and revisit it if you have time.
-
----
-
-#### Part `1abc`
-
-The following lines define
-a variable and then print
-a line to describe what type of 
-data object has been created
+Look at the following example that defines
+variable: `var1` then displays info about 
+the type of object `var1` is. 
 
 ```python
-x = 4.5
-print("x:float")
+var1 = "hello"
+print("var1: str")
 ```
 
-Do the same for the variables below.
-You should select from the folowing options:
+Edit the print lines below so they display 
+the right object types for `var2` and `var3`  
+following the format from the example above.
 
-`int` `float` `list` `dict` `tuple`
-`str` `function` `bool`
-
+choose from:
+int float bool str list dict tuple
 
 ```python
-# file: 8b_part1abc.py
+var2 = "42.5"
+var3 = [ 1, 'one', 2, 'two' ]
 
-a = 7.0
-print("a:")
-
-b = "True"
-print("b:")
-
-c = [ "key", "value" ]
-print("c:")
+print("var2: ")
+print("var3: ")
 ```
 
 ---
 
-#### Part `1d`
+### part1b.py
 
-This code below should define a list storing `12, 3, 6`
+Write code to do the calculation below and 
+store the result as variable: `z`
+
+your code should make use of the variable `x`
+as defined below so it would work if a 
+different value is used 
+
+
+               1
+ z =  x + -------
+             x + 2 
+
+
+test your code with: `print(z)`
 
 ```python
-# file: 8b_part1d.py
-
-# fix this line
-mylist = 12, 3, 6
+x = 2
 ```
+
+add your code below
 
 ---
 
-#### Part `1e`
+### part1c.py
 
-The code below should define
-a string that displays on two lines
-as shown below:
+Create a dictionary with name: `mydict`
+that stores the following data
 
-```
-line one
-line two
-```
+key        value
+"name"     "Einstein"
+"born"     1879
+"died"     1955
+
+
+test your code using: `print(mydict)`
+
+add code below
+
+---
+
+### part1d.py
+
+The following code defines a list
+that stores individual letters
 
 ```python
-# file: 8b_part1e.py
-
-# fix the line below
-mystr = "line one line two"
+word = [ "H", "e", "l", "l", "o" ]
 ```
+
+write a line of code that adds the value: "!"
+to the end of `word`
+
+your code should work even if `word` stored a different number of entries.
+
+test your code has worked using: `print(word)`
+
+add code below
 
 ---
 
-#### Part `1f`
+### part1e.py
 
-The function should return
-the sum of two numbers
-passed as arguments
+Write a function named: `get_last_letter`
+that takes a single argument: `mystr`
+storing a string
 
-It contains an error to fix:
+The function should return the final letter in the string
+
+e.g. 
+if we pass in the value 'apple' the
+value returned should be: 'e'
+
+
+Add code to demonstrate the function
+using argument: hello
+storing the output in variable: `last_letter`
+
+test your code has worked using: `print(last_letter)`
+
+---
+
+### part1f.py
+
+The following code defines a list
+storing a set of strings
 
 ```python
-# file: 8b_part1f.py
-
-def add_numbers(): # fix this line
-	return a + b
-
-print( add_numbers(3,4) )
+numbers = [ "one", "two", "three", "stop", "four", "five", "six" ]
 ```
+
+Write code to loop over the strings 
+in the list and print out the length
+of each string (one per line)
+ with expected output:
+
+  3
+  3
+  5
+  4
+  4
+  3
+
+add code below
 
 ---
 
-#### Part `1g`
+### part1g.py
 
-The following code should select
-the last letter in the string
-
-It should work even if a different
-string was given
+A program is designed to take user input 
+of a single character `y` or `n`
+to check if a user wants to continue like:
 
 ```python
-# file: 8b_part1g.py
-
-letters = "abcde"
-print(letters)
-
-last_letter = letters[5] # fix this line
-print(f"last letter is: {last_letter}")
+print('Enter your choice: y/n')
+user_input = input('> ')
 ```
+
+Add code below that will print a
+corresponding message 
+depending on the input made
+
+"User selected yes"
+"User selected no"
+"User input invalid"
+
+
+add code below
 
 ---
 
-#### Part `1h`
+### part2a.py
 
-A quiz game stores a question and correct answer.
+A student is writing code to run a times-table quiz
+that will ask questions like: What is 5x6?
+(for which the answer should be 30)
 
-The user is asked to type in their answer (an example answer is given below).
+Write a function named: `make_times_table`
 
-The code should perform a **case insensitive** comparison
-to print if the answer is right or wrong
-but currently does not do this.
+This should take two arguments: `z` and `max_val`
+
+    `z`        -  the times table to generate
+    `max_val` -  an integer 0-9 for the maximum value 
+
+it should return a list of the questions e.g.
+
+for `z` = 4 and `max_val` = 6
+
+the function should return
+
+[ "0x4", "1x4", "2x4", "3x4", "4x4", "5x4", "6x4" ]
+
+In addition the function should use default value of 9 for `max_val`
+
+Add lines of code demonstrating how to call the function
+
+i. with `z` set to 4 and `max_val` set to 6
+ii. with `z` set to 5 and `max_val` left so its default value is used
+
+---
+
+### part2b.py
+
+The previous question created a list of questions like
 
 ```python
-# file: 8b_part1h.py
-
-question = "What grows on apple trees?"
-correct_ans = "apples"
-
-user_ans = "APPLES"
-
-
-if user_ans > correct_ans: # fix this line
-	print("correct")
-else:
-	print("wrong")
+qlist = [ "0x6", "1x6", "2x6", "3x6", "4x6", "5x6" ]
 ```
 
----
-
-#### Part `1i`
-
-A program has to check a weight
-value is not too heavy. 
-
-It should return:
-
- - `True` : if less or equal to the given limit
- - `False` : if more than the given limit
-
-Edit the code so it does this correctly
+Use shuffle function from the random module
+so that you can use code like below to 
+shuffle the list contents using code like
 
 ```python
-# file: 8b_part1i.py
-
-def check_weight_ok(x, limit = 240.0):
-
-	if x: # fix this line
-		return True
-	else:
-		return False
-
-print( check_weight_ok(230) )
-print( check_weight_ok(240) )
-print( check_weight_ok(250) )
+print(qlist) # before
+random.shuffle(qlist)
+print(qlist) # after
 ```
+
+Then code that can loop over the list 
+and create a text file storing the questions
+(one question per line)
+in a file named "questions.txt"
+
+write code below
 
 ---
 
-### Part `1j`
+### part2c.py
 
-The code below stores information in variable `z`
-
-Replace the `XXXX` so that the information in `z`
-is displayed correctly 
-
-i.e. lines like `grass is a plant`
+The questions for the quiz are of form:
 
 ```python
-# file: 8b_part1j.py
-
-z = {"apple": "fruit", "green": "colour"}
-
-for key in z.keys():
-	print( f"{XXXX} is a {XXXX}" ) # fix this line
+q_str = "5x4"
 ```
 
+Each question contains a 3 character string like: "axb"
+where `a` and `b` are single digit numbers
 
----
+Write a function called: `get_answer()`
 
+that takes single argument: `q_str`
+which is a 3 character string of form "axb"
 
-## Part 2
+it should return the correct answer for the question (as a integer).
 
-Work in files `8b_part2.py` and `football_card.py`
+Your code will need to do the following:
 
-A game is being written similar to Top Trumps / Pokemon.
+- obtain the first number from the string and convert it to an integer
+- obtain the second number from the string and convert it to an integer
+- calculate and return the correct result
 
-Players play with character cards that list a set of attributes.
+Your code should also handle the case when 
+an invalid question is provided by returning
+a None value i.e. 
 
-This game will use football players as the characters. 
+    return None
 
-Each card stores the following attributes:
+This should occur when either:
 
- - `name`:	 player name (str)
- - `attack`:  value from 1-100 (int)
- - `defence`: value from 1-100 (int)
- - `speed`:   value from 1-10  (float)
-
----
-
-**a)** In file football_card.py define the class `FootballCard`,
-and add a constructor function that takes arguments: 
-
- - `name`
- - `attack`
- - `defence`
- - `speed`
-
-in that order, storing the data into named attributes (`name`, `attack`, `defence`, `speed`)
-
----
-
-**b)** In file `8b_part2.py` write code to import your class definition,
-and create a football card object `mycard` with data:
-
-```
-name: Harry Kane
-attack: 87
-defence: 45
-speed: 8.5
-```
-
----
-
-**c)** Edit your class file to add a `__str__` method so that you
-can print the `FootballCard` objects. They should display 
-on a single line in the format below.
-
-```
-Harry Kane attack:87 defence:45 speed:8.5
-```
-
----
-
-**d)** Add a line to your `8b_part2.py` <s>`test_class.py`</s> file to demonstrate how this is called.
-
----
-
-**e)** The game classes players into two types:
+- provided string is not length 3
+- middle character of string is not 'x'
+- first / last character are not valid numbers 
  
- - `"defender"` (when attack score is less than defence score)
- - `"attacker"` otherwise
+in the final case your code should ensure that
+any exceptions thrown by the integer conversion 
+steps are handled correctly so the code returns 
+without raising an exception
 
-Add a class method `get_type` that returns a string
-`"attacker"` or `"defender"` according to the criteria above.
-
----
-
-**f)** Add a line to your `8b_part2.py` <s>`test_class.py`</s> file to demonstrate how this is called,
-storing the result as variable `card_type`
-
+Check your function works correctly by showing its output
+with each of the following input arguments: 
+"5x4"  "99x99"  "3+3" "?x8"
 
 ---
 
+### part3a.py
 
+Write code that can ask a student to enter 
+a custom set of times table questions
 
-## Part 3
+You should display a message:
 
-Work in file `8b_part3.py` (note the template file provided has a typo and should read `# file: 8b_part3.py` not <s>`# file: 8b_part2.py`</s> but you can ignore or correct this).
+"Enter questions (type `q` when done)"
 
-Write a function `get_player_info()` that would enable a user to enter data describing a football player in the following order:
+Then allow the student to type in their questions one by one.
 
-`name`: `str` (max length 50 characters)
-`attack`: `int` (1-100)
-`defence`: `int` (1-100)
-`speed`: `float` (0-10)
+After each entry valid questions should be stored
+and the appropriate message from below displayed:
 
-It then returns this data in a tuple `(name, attack, defence, speed)`
+    "question stored" or
+    "question invalid"
+ 
+(valid questions are 3 characters of form "axb" or "aXb"
+ where `a` and `b` are digits in range 0 to 9)
 
-Before asking for each input your code should print a message as below
+Once the student types `q` to indicate they have finished
+all valid questions should be saved in a file named
+"custom_questions.txt"
 
+---
+
+### part3b.py
+
+Write code that can load in questions
+from the file: 'all_questions.txt'
+
+It should load these into a list of questions named: `q_list`
+and then double the number of questions in the list
+by adding flipped entries
+
+e.g. for question "3x5"
+the flipped question is "5x3" 
+
+It should then shuffle this list, and use them to run a quiz
+ 
+This should start with the following message:
+ 
+"Welcome to the Quiz" 
+ 
+and display each question, then giving students a prompt using code
+
+```python
+ans = input("> ")
 ```
-"Enter your player name (max 50 char):"
-"Enter attack score (1-100):"
-"Enter defence score (1-100):"
-"Enter speed (0-10):"
+
+If a student gets a question wrong they should be given a message "try again"
+and must continue to enter their answer until they get the answer correct
+enter the correct answer.
+
+Your quiz should calculate the time taken to answer the questions
+
+This can be done by using the `time.time()` from the time module
+using the commands below in the appropriate place
+
+```python
+start_time = time.time()
+end_time = time.time()
+time_taken = round(end_time - start_time)  
 ```
 
-Then use code like below to collect input into a variable:
-
-`____ = input("> ")`
-
-Your code can assume that the user always enters a valid data type (string for name, and string that can be converted to an `int` for attack & defend or `float` for speed).
-
-Your code should repeat a prompt when an entry is invalid until a valid value is given 
-(i.e. `name` more than 50 char, `attack`/`defence`/`speed` outside the allowed ranges)
-
-
-
+When the student completes the quiz they should recieve a message
+showing the time taken:
+ 
+ You took ___ seconds!
+ 
 ---
 
 ### Submitting your work
@@ -348,7 +382,7 @@ Run the following lines in the terminal to stage, commit and push your code back
 
 ```
 git add .
-git commit -m "completed 8b"
+git commit -m "completed 11b"
 git push
 ```
 
