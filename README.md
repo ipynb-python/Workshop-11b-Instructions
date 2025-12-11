@@ -57,12 +57,11 @@ x = 2
 Create a dictionary with name: `mydict`
 that stores the following data
 
-```
-key        value
-"name"     "Einstein"
-"born"     1879
-"died"     1955
-```
+
+**`key       value`**
+`"name"     "Einstein"`
+`"born"     1879`
+`"died"     1955`
 
 test your code using: `print(mydict)`
 
