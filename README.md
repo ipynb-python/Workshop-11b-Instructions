@@ -39,9 +39,9 @@ as defined below so it would work if a
 different value is used 
 
 ```
-               1
+             1
  z =  x + -------
-             x + 2 
+           x + 2 
 ```
 
 test your code with: `print(z)`
